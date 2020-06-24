@@ -33,6 +33,7 @@ Partial Class EntregaBolsasolidaria
         Me.Label6 = New System.Windows.Forms.Label()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.txtNombre = New System.Windows.Forms.TextBox()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.txtDireccion = New System.Windows.Forms.TextBox()
         Me.txtMunicipios = New System.Windows.Forms.TextBox()
@@ -40,7 +41,6 @@ Partial Class EntregaBolsasolidaria
         Me.chkRegular = New System.Windows.Forms.CheckBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtID = New System.Windows.Forms.MaskedTextBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -56,6 +56,7 @@ Partial Class EntregaBolsasolidaria
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
         Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
         Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.btnCerrar = New System.Windows.Forms.Button()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataHistorial, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -181,6 +182,16 @@ Partial Class EntregaBolsasolidaria
         Me.txtNombre.Size = New System.Drawing.Size(208, 20)
         Me.txtNombre.TabIndex = 21
         '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.Location = New System.Drawing.Point(254, 152)
+        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(68, 24)
+        Me.btnLimpiar.TabIndex = 19
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = True
+        '
         'Label3
         '
         Me.Label3.AutoSize = True
@@ -247,16 +258,6 @@ Partial Class EntregaBolsasolidaria
         Me.Label5.Size = New System.Drawing.Size(43, 13)
         Me.Label5.TabIndex = 0
         Me.Label5.Text = "Estado:"
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.Location = New System.Drawing.Point(254, 152)
-        Me.btnLimpiar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(68, 24)
-        Me.btnLimpiar.TabIndex = 19
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -382,12 +383,22 @@ Partial Class EntregaBolsasolidaria
         '
         Me.ErrorValidacion.ContainerControl = Me
         '
+        'btnCerrar
+        '
+        Me.btnCerrar.Location = New System.Drawing.Point(833, 525)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnCerrar.TabIndex = 6
+        Me.btnCerrar.Text = "Cerrar"
+        Me.btnCerrar.UseVisualStyleBackColor = True
+        '
         'EntregaBolsasolidaria
         '
         Me.AcceptButton = Me.btnAgregar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(921, 539)
+        Me.ClientSize = New System.Drawing.Size(922, 556)
+        Me.Controls.Add(Me.btnCerrar)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.GroupBox2)
@@ -441,4 +452,5 @@ Partial Class EntregaBolsasolidaria
     Friend WithEvents Direccion As DataGridViewTextBoxColumn
     Friend WithEvents ToolTip As ToolTip
     Friend WithEvents ErrorValidacion As ErrorProvider
+    Friend WithEvents btnCerrar As Button
 End Class
