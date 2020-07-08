@@ -42,49 +42,69 @@ Public Class MenuPrincipal
     <DllImport("user32.DLL", EntryPoint:="SendMessage")>
     Private Shared Sub SendMessage(ByVal hWnd As System.IntPtr, ByVal wMsg As Integer, ByVal wParam As Integer, ByVal lParam As Integer)
     End Sub
-    Private Sub PanelBarraTitulo_MouseMove(sender As Object, e As MouseEventArgs) Handles PanelBarraTitulo.MouseMove
+    Private Sub PanelBarraTitulo_MouseMove(sender As Object, e As MouseEventArgs)
         ReleaseCapture()
         SendMessage(Me.Handle, &H112&, &HF012&, 0)
     End Sub
     Dim lx, ly As Integer
     Dim sw, sh As Integer
 
-    Private Sub btnRestaurar_Click(sender As Object, e As EventArgs) Handles btnRestaurar.Click
-        Me.Size = New Size(sw, sh)
-        Me.Location = New Point(lx, ly)
-        btnMaximizar.Visible = True
-        btnRestaurar.Visible = False
-
-    End Sub
-
-    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs) Handles btnMinimizar.Click
+    Private Sub btnMinimizar_Click(sender As Object, e As EventArgs)
         Me.WindowState = FormWindowState.Minimized
     End Sub
 
-    Private Sub btnMaximizar_Click(sender As Object, e As EventArgs) Handles btnMaximizar.Click
-
-        lx = Me.Location.X
-        ly = Me.Location.Y
-        sw = Me.Size.Width
-        sh = Me.Size.Height
-        btnMaximizar.Visible = False
-        btnRestaurar.Visible = True
-        Me.Size = Screen.PrimaryScreen.WorkingArea.Size
-        Me.Location = Screen.PrimaryScreen.WorkingArea.Location
-
-    End Sub
-
-    Private Sub btnCerrar_Click(sender As Object, e As EventArgs) Handles btnCerrar.Click
+    Private Sub btnCerrar_Click(sender As Object, e As EventArgs)
         Application.Exit()
     End Sub
 
-    Private Sub btnTrabajos_Click(sender As Object, e As EventArgs) Handles btnTrabajos.Click
-        AbrirFormEnPanel(Of EntregaBolsasolidaria)()
-        Button1.BackColor = Color.FromArgb(12, 61, 92)
+    Private Sub btnTrabajos_Click(sender As Object, e As EventArgs)
+
     End Sub
 
-    Private Sub PanelBarraTitulo_Paint(sender As Object, e As PaintEventArgs) Handles PanelBarraTitulo.Paint
+    Private Sub PanelBarraTitulo_Paint(sender As Object, e As PaintEventArgs)
 
+    End Sub
+
+    Private Sub PanelBarraTitulo_Paint_1(sender As Object, e As PaintEventArgs) Handles PanelBarraTitulo.Paint
+
+    End Sub
+
+
+    Private Sub btnMaximizar_Click(sender As Object, e As EventArgs)
+        btnRestaurar.Visible = False
+        btnMaximizar.Visible = True
+        Me.WindowState = FormWindowState.Normal
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub btnProductos_Click(sender As Object, e As EventArgs) Handles btnProductos.Click
+        AbrirFormEnPanel(Of frmArreglos)()
+
+    End Sub
+
+    Private Sub btnclientes_Click(sender As Object, e As EventArgs) Handles btnclientes.Click
+        AbrirFormEnPanel(Of frmLibretadeAhorros)()
+
+    End Sub
+
+    Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
+        AbrirFormEnPanel(Of EntregaBolsasolidaria)()
+
+    End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs)
+        If MsgBox("Desea salir de la aplicacion?", vbQuestion + vbYesNo, "Salir") = vbYes Then
+            End
+        End If
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        If MsgBox("Desea salir de la aplicacion?", vbQuestion + vbYesNo, "Salir") = vbYes Then
+            End
+        End If
     End Sub
 #End Region
 
@@ -112,13 +132,13 @@ Public Class MenuPrincipal
     Private Sub CerrarFormulario(ByVal sender As Object, ByVal e As FormClosedEventArgs)
         'CONDICION SI FORMS ESTA ABIERTO
         If (Application.OpenForms("Form1") Is Nothing) Then
-            btnTrabajos.BackColor = Color.FromArgb(4, 41, 68)
+
         End If
         If (Application.OpenForms("Form2") Is Nothing) Then
-            btnTareas.BackColor = Color.FromArgb(4, 41, 68)
+
         End If
         If (Application.OpenForms("Form3") Is Nothing) Then
-            btnSalir.BackColor = Color.FromArgb(4, 41, 68)
+
         End If
     End Sub
 

@@ -346,7 +346,8 @@ Partial Class frmArreglos
         '
         'btnLimpiar
         '
-        Me.btnLimpiar.BackColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.btnLimpiar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.ButtonFace
         Me.btnLimpiar.Location = New System.Drawing.Point(266, 365)
         Me.btnLimpiar.Name = "btnLimpiar"
         Me.btnLimpiar.Size = New System.Drawing.Size(96, 23)
@@ -358,7 +359,7 @@ Partial Class frmArreglos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.Brown
+        Me.BackColor = System.Drawing.Color.White
         Me.ClientSize = New System.Drawing.Size(672, 505)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
@@ -366,6 +367,7 @@ Partial Class frmArreglos
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.btnLimpiar)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmArreglos"

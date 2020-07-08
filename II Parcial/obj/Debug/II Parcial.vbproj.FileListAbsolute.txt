@@ -12,3 +12,18 @@ C:\Users\Pascall\source\repos\II-parcial\II Parcial\obj\Debug\II Parcial.pdb
 C:\Users\Pascall\Source\Repos\II-parcial\II Parcial\obj\Debug\II_Parcial.frmArreglos.resources
 C:\Users\Pascall\Source\Repos\II-parcial\II Parcial\obj\Debug\II_Parcial.frmLibretadeAhorros.resources
 C:\Users\Pascall\Source\Repos\II-parcial\II Parcial\obj\Debug\II_Parcial.EntregaBolsasolidaria.resources
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\bin\Debug\II Parcial.exe.config
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\bin\Debug\II Parcial.exe
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\bin\Debug\II Parcial.pdb
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\bin\Debug\II Parcial.xml
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II Parcial.vbprojAssemblyReference.cache
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II_Parcial.EntregaBolsasolidaria.resources
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II_Parcial.frmArreglos.resources
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II_Parcial.frmLibretadeAhorros.resources
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II_Parcial.MenuPrincipal.resources
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II_Parcial.Resources.resources
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II Parcial.vbproj.GenerateResource.cache
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II Parcial.vbproj.CoreCompileInputs.cache
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II Parcial.exe
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II Parcial.xml
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II Parcial.pdb
