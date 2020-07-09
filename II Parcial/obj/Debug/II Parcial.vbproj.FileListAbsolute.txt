@@ -27,3 +27,4 @@ C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II Parcial.vbproj.C
 C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II Parcial.exe
 C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II Parcial.xml
 C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II Parcial.pdb
+C:\Users\Sandra\Source\Repos\II-parcial\II Parcial\obj\Debug\II_Parcial.frmestudiantes.resources

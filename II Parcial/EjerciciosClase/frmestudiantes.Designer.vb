@@ -22,6 +22,7 @@ Partial Class frmestudiantes
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Me.btnLimpiar = New System.Windows.Forms.Button()
         Me.btnagregar = New System.Windows.Forms.Button()
         Me.btnBuscar = New System.Windows.Forms.Button()
@@ -46,9 +47,12 @@ Partial Class frmestudiantes
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.txtSNombre = New System.Windows.Forms.TextBox()
         Me.DGestudiantes = New System.Windows.Forms.DataGridView()
+        Me.ToolTip = New System.Windows.Forms.ToolTip(Me.components)
+        Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DGestudiantes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'btnLimpiar
@@ -276,6 +280,10 @@ Partial Class frmestudiantes
         Me.DGestudiantes.Size = New System.Drawing.Size(728, 253)
         Me.DGestudiantes.TabIndex = 19
         '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
         'frmestudiantes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -291,6 +299,7 @@ Partial Class frmestudiantes
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.DGestudiantes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -319,4 +328,6 @@ Partial Class frmestudiantes
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents txtSNombre As TextBox
     Friend WithEvents DGestudiantes As DataGridView
+    Friend WithEvents ToolTip As ToolTip
+    Friend WithEvents ErrorValidacion As ErrorProvider
 End Class

@@ -22,50 +22,81 @@ Partial Class frmArreglos
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.cmbCompus = New System.Windows.Forms.ComboBox()
-        Me.btnSolicitar = New System.Windows.Forms.Button()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.txtCantidad = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtcan = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtprecio = New System.Windows.Forms.TextBox()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.components = New System.ComponentModel.Container()
+        Me.tmensaje = New System.Windows.Forms.ToolTip(Me.components)
         Me.cmbPrecios = New System.Windows.Forms.ComboBox()
         Me.btnGenerarPrecio = New System.Windows.Forms.Button()
         Me.cmbComputadoras = New System.Windows.Forms.ComboBox()
         Me.btnGenerar = New System.Windows.Forms.Button()
+        Me.cmbCompus = New System.Windows.Forms.ComboBox()
+        Me.btnSolicitar = New System.Windows.Forms.Button()
+        Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.btnregistrar = New System.Windows.Forms.Button()
+        Me.txtCanIngresar = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ErrorValidacion = New System.Windows.Forms.ErrorProvider(Me.components)
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.btnLimpiar = New System.Windows.Forms.Button()
+        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.btnvender = New System.Windows.Forms.Button()
+        Me.TextBox4 = New System.Windows.Forms.TextBox()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.txtcan = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtprecio = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.txtmodelo = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.btnbuscar = New System.Windows.Forms.Button()
         Me.txtmarca = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.btnregistrar = New System.Windows.Forms.Button()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.txtCanIngresar = New System.Windows.Forms.TextBox()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.btnvender = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.GroupBox5 = New System.Windows.Forms.GroupBox()
-        Me.btnLimpiar = New System.Windows.Forms.Button()
-        Me.GroupBox2.SuspendLayout()
-        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox5.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
-        Me.GroupBox5.SuspendLayout()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.SuspendLayout()
         '
-        'Label2
+        'cmbPrecios
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 26)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 13)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Cantidad Computadoras"
+        Me.cmbPrecios.FormattingEnabled = True
+        Me.cmbPrecios.Location = New System.Drawing.Point(194, 86)
+        Me.cmbPrecios.Name = "cmbPrecios"
+        Me.cmbPrecios.Size = New System.Drawing.Size(121, 21)
+        Me.cmbPrecios.TabIndex = 3
+        '
+        'btnGenerarPrecio
+        '
+        Me.btnGenerarPrecio.BackColor = System.Drawing.Color.Gray
+        Me.btnGenerarPrecio.Location = New System.Drawing.Point(219, 32)
+        Me.btnGenerarPrecio.Name = "btnGenerarPrecio"
+        Me.btnGenerarPrecio.Size = New System.Drawing.Size(75, 23)
+        Me.btnGenerarPrecio.TabIndex = 2
+        Me.btnGenerarPrecio.Text = "Precio"
+        Me.btnGenerarPrecio.UseVisualStyleBackColor = False
+        '
+        'cmbComputadoras
+        '
+        Me.cmbComputadoras.FormattingEnabled = True
+        Me.cmbComputadoras.Location = New System.Drawing.Point(6, 86)
+        Me.cmbComputadoras.Name = "cmbComputadoras"
+        Me.cmbComputadoras.Size = New System.Drawing.Size(121, 21)
+        Me.cmbComputadoras.TabIndex = 1
+        '
+        'btnGenerar
+        '
+        Me.btnGenerar.BackColor = System.Drawing.Color.Gray
+        Me.btnGenerar.Location = New System.Drawing.Point(25, 32)
+        Me.btnGenerar.Name = "btnGenerar"
+        Me.btnGenerar.Size = New System.Drawing.Size(75, 39)
+        Me.btnGenerar.TabIndex = 0
+        Me.btnGenerar.Text = "Generar Computador"
+        Me.btnGenerar.UseVisualStyleBackColor = False
         '
         'cmbCompus
         '
@@ -77,29 +108,13 @@ Partial Class frmArreglos
         '
         'btnSolicitar
         '
-        Me.btnSolicitar.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnSolicitar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnSolicitar.BackColor = System.Drawing.Color.Gray
         Me.btnSolicitar.Location = New System.Drawing.Point(100, 102)
         Me.btnSolicitar.Name = "btnSolicitar"
         Me.btnSolicitar.Size = New System.Drawing.Size(75, 23)
         Me.btnSolicitar.TabIndex = 2
         Me.btnSolicitar.Text = "Solicitar"
         Me.btnSolicitar.UseVisualStyleBackColor = False
-        '
-        'GroupBox2
-        '
-        Me.GroupBox2.BackColor = System.Drawing.Color.Gray
-        Me.GroupBox2.Controls.Add(Me.cmbCompus)
-        Me.GroupBox2.Controls.Add(Me.btnSolicitar)
-        Me.GroupBox2.Controls.Add(Me.txtCantidad)
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox2.Location = New System.Drawing.Point(24, 172)
-        Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(338, 178)
-        Me.GroupBox2.TabIndex = 35
-        Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Multidimensionales"
         '
         'txtCantidad
         '
@@ -116,6 +131,129 @@ Partial Class frmArreglos
         Me.Label1.Size = New System.Drawing.Size(120, 13)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Cantidad Computadoras"
+        '
+        'btnregistrar
+        '
+        Me.btnregistrar.BackColor = System.Drawing.Color.Gray
+        Me.btnregistrar.Location = New System.Drawing.Point(92, 71)
+        Me.btnregistrar.Name = "btnregistrar"
+        Me.btnregistrar.Size = New System.Drawing.Size(75, 23)
+        Me.btnregistrar.TabIndex = 5
+        Me.btnregistrar.Text = "Registrar"
+        Me.btnregistrar.UseVisualStyleBackColor = False
+        '
+        'txtCanIngresar
+        '
+        Me.txtCanIngresar.Location = New System.Drawing.Point(133, 24)
+        Me.txtCanIngresar.Name = "txtCanIngresar"
+        Me.txtCanIngresar.Size = New System.Drawing.Size(100, 20)
+        Me.txtCanIngresar.TabIndex = 5
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(13, 26)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(120, 13)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Cantidad Computadoras"
+        '
+        'ErrorValidacion
+        '
+        Me.ErrorValidacion.ContainerControl = Me
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(41, 26)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(37, 13)
+        Me.Label3.TabIndex = 5
+        Me.Label3.Text = "Marca"
+        '
+        'btnLimpiar
+        '
+        Me.btnLimpiar.BackColor = System.Drawing.Color.Gray
+        Me.btnLimpiar.Location = New System.Drawing.Point(285, 461)
+        Me.btnLimpiar.Name = "btnLimpiar"
+        Me.btnLimpiar.Size = New System.Drawing.Size(96, 23)
+        Me.btnLimpiar.TabIndex = 36
+        Me.btnLimpiar.Text = "Limpiar"
+        Me.btnLimpiar.UseVisualStyleBackColor = False
+        '
+        'GroupBox5
+        '
+        Me.GroupBox5.Controls.Add(Me.btnvender)
+        Me.GroupBox5.Controls.Add(Me.TextBox4)
+        Me.GroupBox5.Controls.Add(Me.Label10)
+        Me.GroupBox5.Location = New System.Drawing.Point(361, 334)
+        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox5.Name = "GroupBox5"
+        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox5.Size = New System.Drawing.Size(269, 105)
+        Me.GroupBox5.TabIndex = 40
+        Me.GroupBox5.TabStop = False
+        Me.GroupBox5.Text = "Registro"
+        '
+        'btnvender
+        '
+        Me.btnvender.BackColor = System.Drawing.Color.Gray
+        Me.btnvender.Location = New System.Drawing.Point(101, 61)
+        Me.btnvender.Name = "btnvender"
+        Me.btnvender.Size = New System.Drawing.Size(75, 23)
+        Me.btnvender.TabIndex = 5
+        Me.btnvender.Text = "Vender"
+        Me.btnvender.UseVisualStyleBackColor = False
+        '
+        'TextBox4
+        '
+        Me.TextBox4.Location = New System.Drawing.Point(67, 26)
+        Me.TextBox4.Name = "TextBox4"
+        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
+        Me.TextBox4.TabIndex = 5
+        '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(23, 29)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(35, 13)
+        Me.Label10.TabIndex = 5
+        Me.Label10.Text = "Venta"
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.btnregistrar)
+        Me.GroupBox3.Controls.Add(Me.txtCanIngresar)
+        Me.GroupBox3.Controls.Add(Me.Label2)
+        Me.GroupBox3.Location = New System.Drawing.Point(361, 32)
+        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox3.Size = New System.Drawing.Size(269, 128)
+        Me.GroupBox3.TabIndex = 38
+        Me.GroupBox3.TabStop = False
+        Me.GroupBox3.Text = "Registro"
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.txtcan)
+        Me.GroupBox4.Controls.Add(Me.Label6)
+        Me.GroupBox4.Controls.Add(Me.txtprecio)
+        Me.GroupBox4.Controls.Add(Me.Label5)
+        Me.GroupBox4.Controls.Add(Me.txtmodelo)
+        Me.GroupBox4.Controls.Add(Me.Label4)
+        Me.GroupBox4.Controls.Add(Me.btnbuscar)
+        Me.GroupBox4.Controls.Add(Me.txtmarca)
+        Me.GroupBox4.Controls.Add(Me.Label3)
+        Me.GroupBox4.Location = New System.Drawing.Point(361, 164)
+        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2)
+        Me.GroupBox4.Size = New System.Drawing.Size(269, 166)
+        Me.GroupBox4.TabIndex = 39
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "Registro"
         '
         'txtcan
         '
@@ -139,59 +277,6 @@ Partial Class frmArreglos
         Me.txtprecio.Name = "txtprecio"
         Me.txtprecio.Size = New System.Drawing.Size(100, 20)
         Me.txtprecio.TabIndex = 8
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.BackColor = System.Drawing.Color.Gray
-        Me.GroupBox1.Controls.Add(Me.cmbPrecios)
-        Me.GroupBox1.Controls.Add(Me.btnGenerarPrecio)
-        Me.GroupBox1.Controls.Add(Me.cmbComputadoras)
-        Me.GroupBox1.Controls.Add(Me.btnGenerar)
-        Me.GroupBox1.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox1.Location = New System.Drawing.Point(24, 21)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(338, 142)
-        Me.GroupBox1.TabIndex = 34
-        Me.GroupBox1.TabStop = False
-        Me.GroupBox1.Text = "Unidimensionales"
-        '
-        'cmbPrecios
-        '
-        Me.cmbPrecios.FormattingEnabled = True
-        Me.cmbPrecios.Location = New System.Drawing.Point(194, 86)
-        Me.cmbPrecios.Name = "cmbPrecios"
-        Me.cmbPrecios.Size = New System.Drawing.Size(121, 21)
-        Me.cmbPrecios.TabIndex = 3
-        '
-        'btnGenerarPrecio
-        '
-        Me.btnGenerarPrecio.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnGenerarPrecio.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnGenerarPrecio.Location = New System.Drawing.Point(219, 32)
-        Me.btnGenerarPrecio.Name = "btnGenerarPrecio"
-        Me.btnGenerarPrecio.Size = New System.Drawing.Size(75, 23)
-        Me.btnGenerarPrecio.TabIndex = 2
-        Me.btnGenerarPrecio.Text = "Precio"
-        Me.btnGenerarPrecio.UseVisualStyleBackColor = False
-        '
-        'cmbComputadoras
-        '
-        Me.cmbComputadoras.FormattingEnabled = True
-        Me.cmbComputadoras.Location = New System.Drawing.Point(6, 86)
-        Me.cmbComputadoras.Name = "cmbComputadoras"
-        Me.cmbComputadoras.Size = New System.Drawing.Size(121, 21)
-        Me.cmbComputadoras.TabIndex = 1
-        '
-        'btnGenerar
-        '
-        Me.btnGenerar.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnGenerar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnGenerar.Location = New System.Drawing.Point(25, 32)
-        Me.btnGenerar.Name = "btnGenerar"
-        Me.btnGenerar.Size = New System.Drawing.Size(75, 39)
-        Me.btnGenerar.TabIndex = 0
-        Me.btnGenerar.Text = "Generar Computador"
-        Me.btnGenerar.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -220,8 +305,7 @@ Partial Class frmArreglos
         '
         'btnbuscar
         '
-        Me.btnbuscar.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnbuscar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        Me.btnbuscar.BackColor = System.Drawing.Color.Gray
         Me.btnbuscar.Location = New System.Drawing.Point(101, 131)
         Me.btnbuscar.Name = "btnbuscar"
         Me.btnbuscar.Size = New System.Drawing.Size(75, 23)
@@ -236,183 +320,93 @@ Partial Class frmArreglos
         Me.txtmarca.Size = New System.Drawing.Size(100, 20)
         Me.txtmarca.TabIndex = 5
         '
-        'Label3
+        'GroupBox1
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(41, 26)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(37, 13)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Marca"
+        Me.GroupBox1.Controls.Add(Me.cmbPrecios)
+        Me.GroupBox1.Controls.Add(Me.btnGenerarPrecio)
+        Me.GroupBox1.Controls.Add(Me.cmbComputadoras)
+        Me.GroupBox1.Controls.Add(Me.btnGenerar)
+        Me.GroupBox1.Location = New System.Drawing.Point(13, 32)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(338, 216)
+        Me.GroupBox1.TabIndex = 34
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Unidimensionales"
         '
-        'btnregistrar
+        'GroupBox2
         '
-        Me.btnregistrar.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnregistrar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnregistrar.Location = New System.Drawing.Point(92, 71)
-        Me.btnregistrar.Name = "btnregistrar"
-        Me.btnregistrar.Size = New System.Drawing.Size(75, 23)
-        Me.btnregistrar.TabIndex = 5
-        Me.btnregistrar.Text = "Registrar"
-        Me.btnregistrar.UseVisualStyleBackColor = False
-        '
-        'GroupBox3
-        '
-        Me.GroupBox3.BackColor = System.Drawing.Color.Gray
-        Me.GroupBox3.Controls.Add(Me.btnregistrar)
-        Me.GroupBox3.Controls.Add(Me.txtCanIngresar)
-        Me.GroupBox3.Controls.Add(Me.Label2)
-        Me.GroupBox3.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox3.Location = New System.Drawing.Point(372, 21)
-        Me.GroupBox3.Margin = New System.Windows.Forms.Padding(2)
-        Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox3.Size = New System.Drawing.Size(269, 107)
-        Me.GroupBox3.TabIndex = 37
-        Me.GroupBox3.TabStop = False
-        Me.GroupBox3.Text = "Registro"
-        '
-        'txtCanIngresar
-        '
-        Me.txtCanIngresar.Location = New System.Drawing.Point(133, 24)
-        Me.txtCanIngresar.Name = "txtCanIngresar"
-        Me.txtCanIngresar.Size = New System.Drawing.Size(100, 20)
-        Me.txtCanIngresar.TabIndex = 5
-        '
-        'GroupBox4
-        '
-        Me.GroupBox4.BackColor = System.Drawing.Color.Gray
-        Me.GroupBox4.Controls.Add(Me.txtcan)
-        Me.GroupBox4.Controls.Add(Me.Label6)
-        Me.GroupBox4.Controls.Add(Me.txtprecio)
-        Me.GroupBox4.Controls.Add(Me.Label5)
-        Me.GroupBox4.Controls.Add(Me.txtmodelo)
-        Me.GroupBox4.Controls.Add(Me.Label4)
-        Me.GroupBox4.Controls.Add(Me.btnbuscar)
-        Me.GroupBox4.Controls.Add(Me.txtmarca)
-        Me.GroupBox4.Controls.Add(Me.Label3)
-        Me.GroupBox4.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox4.Location = New System.Drawing.Point(372, 143)
-        Me.GroupBox4.Margin = New System.Windows.Forms.Padding(2)
-        Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox4.Size = New System.Drawing.Size(269, 166)
-        Me.GroupBox4.TabIndex = 38
-        Me.GroupBox4.TabStop = False
-        Me.GroupBox4.Text = "Registro"
-        '
-        'btnvender
-        '
-        Me.btnvender.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.btnvender.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnvender.Location = New System.Drawing.Point(101, 89)
-        Me.btnvender.Name = "btnvender"
-        Me.btnvender.Size = New System.Drawing.Size(75, 23)
-        Me.btnvender.TabIndex = 5
-        Me.btnvender.Text = "Vender"
-        Me.btnvender.UseVisualStyleBackColor = False
-        '
-        'TextBox4
-        '
-        Me.TextBox4.Location = New System.Drawing.Point(67, 26)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(100, 20)
-        Me.TextBox4.TabIndex = 5
-        '
-        'Label10
-        '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(23, 29)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(35, 13)
-        Me.Label10.TabIndex = 5
-        Me.Label10.Text = "Venta"
-        '
-        'GroupBox5
-        '
-        Me.GroupBox5.BackColor = System.Drawing.Color.Gray
-        Me.GroupBox5.Controls.Add(Me.btnvender)
-        Me.GroupBox5.Controls.Add(Me.TextBox4)
-        Me.GroupBox5.Controls.Add(Me.Label10)
-        Me.GroupBox5.ForeColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.GroupBox5.Location = New System.Drawing.Point(372, 327)
-        Me.GroupBox5.Margin = New System.Windows.Forms.Padding(2)
-        Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Padding = New System.Windows.Forms.Padding(2)
-        Me.GroupBox5.Size = New System.Drawing.Size(269, 148)
-        Me.GroupBox5.TabIndex = 39
-        Me.GroupBox5.TabStop = False
-        Me.GroupBox5.Text = "Registro"
-        '
-        'btnLimpiar
-        '
-        Me.btnLimpiar.BackColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.btnLimpiar.ForeColor = System.Drawing.SystemColors.ButtonFace
-        Me.btnLimpiar.Location = New System.Drawing.Point(266, 365)
-        Me.btnLimpiar.Name = "btnLimpiar"
-        Me.btnLimpiar.Size = New System.Drawing.Size(96, 23)
-        Me.btnLimpiar.TabIndex = 36
-        Me.btnLimpiar.Text = "Limpiar"
-        Me.btnLimpiar.UseVisualStyleBackColor = False
+        Me.GroupBox2.Controls.Add(Me.cmbCompus)
+        Me.GroupBox2.Controls.Add(Me.btnSolicitar)
+        Me.GroupBox2.Controls.Add(Me.txtCantidad)
+        Me.GroupBox2.Controls.Add(Me.Label1)
+        Me.GroupBox2.Location = New System.Drawing.Point(13, 250)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(338, 178)
+        Me.GroupBox2.TabIndex = 35
+        Me.GroupBox2.TabStop = False
+        Me.GroupBox2.Text = "Multidimensionales"
         '
         'frmArreglos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(672, 505)
-        Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
+        Me.ClientSize = New System.Drawing.Size(663, 529)
+        Me.Controls.Add(Me.btnLimpiar)
+        Me.Controls.Add(Me.GroupBox5)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox4)
-        Me.Controls.Add(Me.GroupBox5)
-        Me.Controls.Add(Me.btnLimpiar)
+        Me.Controls.Add(Me.GroupBox1)
+        Me.Controls.Add(Me.GroupBox2)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "frmArreglos"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "frmArreglos"
-        Me.GroupBox2.ResumeLayout(False)
-        Me.GroupBox2.PerformLayout()
-        Me.GroupBox1.ResumeLayout(False)
+        CType(Me.ErrorValidacion, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
-        Me.GroupBox5.ResumeLayout(False)
-        Me.GroupBox5.PerformLayout()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Label2 As Label
-    Friend WithEvents cmbCompus As ComboBox
-    Friend WithEvents btnSolicitar As Button
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents txtCantidad As TextBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents txtcan As TextBox
-    Friend WithEvents Label6 As Label
-    Friend WithEvents txtprecio As TextBox
-    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents tmensaje As ToolTip
     Friend WithEvents cmbPrecios As ComboBox
     Friend WithEvents btnGenerarPrecio As Button
     Friend WithEvents cmbComputadoras As ComboBox
     Friend WithEvents btnGenerar As Button
+    Friend WithEvents cmbCompus As ComboBox
+    Friend WithEvents btnSolicitar As Button
+    Friend WithEvents txtCantidad As TextBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents btnregistrar As Button
+    Friend WithEvents txtCanIngresar As TextBox
+    Friend WithEvents Label2 As Label
+    Friend WithEvents ErrorValidacion As ErrorProvider
+    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents GroupBox5 As GroupBox
+    Friend WithEvents btnvender As Button
+    Friend WithEvents TextBox4 As TextBox
+    Friend WithEvents Label10 As Label
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents txtcan As TextBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtprecio As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents txtmodelo As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents btnbuscar As Button
     Friend WithEvents txtmarca As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents btnregistrar As Button
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents txtCanIngresar As TextBox
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents btnvender As Button
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label10 As Label
-    Friend WithEvents GroupBox5 As GroupBox
-    Friend WithEvents btnLimpiar As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBox2 As GroupBox
 End Class

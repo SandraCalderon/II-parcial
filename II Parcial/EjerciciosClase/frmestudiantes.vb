@@ -124,6 +124,15 @@ on cl.id = re.CodigoClase", cn)
 
     Private Sub btnagregar_Click(sender As Object, e As EventArgs) Handles btnagregar.Click
         Try
+            If txtCodigo.Text = "" Or txtPNombre.Text = "" Or txtSNombre.Text = "" Or txtPApellido.Text = "" Or txtSApellido.Text = "" Or txtEdad.Text = "" Or cmbSexo.SelectedIndex = -1 Or cmbClase.SelectedIndex = -1 Then
+                MessageBox.Show("Error debe llenar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
+
+            If Not IsNumeric(txtEdad.Text) Then
+                MessageBox.Show("Debe de ingresar un numero entero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
             If (validarEstudiantes(txtCodigo.Text) = False) Then
                 Dim agregar As String = "insert into Alumnos.Registro values(" + txtCodigo.Text + ",'" + txtPNombre.Text + "','" + txtSNombre.Text + "','" + txtPApellido.Text + "','" + txtSApellido.Text + "','" + txtEdad.Text + "','" + cmbSexo.Text + "', '" + cmbClase.Text + "')"
                 If (Insertar(agregar)) Then
@@ -209,6 +218,10 @@ on cl.id = re.CodigoClase", cn)
     End Function
     Private Sub btnEditar_Click(sender As Object, e As EventArgs) Handles btnEditar.Click
         Try
+            If txtCodigo.Text = "" Or txtPNombre.Text = "" Or txtSNombre.Text = "" Or txtPApellido.Text = "" Or txtSApellido.Text = "" Or txtEdad.Text = "" Or cmbSexo.SelectedIndex = -1 Or cmbClase.SelectedIndex = -1 Then
+                MessageBox.Show("Error debe llenar todos los campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+            End If
             txtCodigo.Enabled = False
             Dim modificar As String =
            "PrimerNombre='" + txtPNombre.Text + "', SegundoNombre='" + txtSNombre.Text + "', PrimerApellido='" + txtPApellido.Text + "', SegundoApellido='" + txtSApellido.Text + "', edad='" + txtEdad.Text + "',sexo='" + cmbSexo.Text + "',CodigoClase='" + cmbClase.Text + "'"
@@ -257,5 +270,117 @@ on cl.id = re.CodigoClase", cn)
             MessageBox.Show("no se lleno por: " + ex.ToString)
             conexion.Close()
         End Try
+    End Sub
+
+    Private Sub btnagregar_MouseHover(sender As Object, e As EventArgs) Handles btnagregar.MouseHover
+        ToolTip.SetToolTip(btnagregar, "Ingresa un nuevo estudiante a la Base de Datos")
+        ToolTip.ToolTipTitle = "agregar"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnLimpiar_MouseHover(sender As Object, e As EventArgs) Handles btnLimpiar.MouseHover
+        ToolTip.SetToolTip(btnLimpiar, "Limpia la informacion antes registrada")
+        ToolTip.ToolTipTitle = "Limpiar"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btnEditar_MouseHover(sender As Object, e As EventArgs) Handles btnEditar.MouseHover
+        ToolTip.SetToolTip(btnEditar, "Realiza una actualizacion de un registro")
+        ToolTip.ToolTipTitle = "Editar"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub btneliminar_MouseHover(sender As Object, e As EventArgs) Handles btneliminar.MouseHover
+        ToolTip.SetToolTip(btneliminar, "Realiza una eliminacion de un registro")
+        ToolTip.ToolTipTitle = "Eliminar"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+
+    End Sub
+
+    Private Sub btnBuscar_MouseHover(sender As Object, e As EventArgs) Handles btnBuscar.MouseHover
+        ToolTip.SetToolTip(btnBuscar, "Realiza una busqueda de un registro")
+        ToolTip.ToolTipTitle = "Buscar"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtPNombre_MouseHover(sender As Object, e As EventArgs) Handles txtPNombre.MouseHover
+        ToolTip.SetToolTip(txtPNombre, "Ejemplo: Alberto")
+        ToolTip.ToolTipTitle = "Nombre"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtSNombre_MouseHover(sender As Object, e As EventArgs) Handles txtSNombre.MouseHover
+        ToolTip.SetToolTip(txtSNombre, "Ejemplo:  Jose ")
+        ToolTip.ToolTipTitle = "Segundo Nombre"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtPApellido_MouseHover(sender As Object, e As EventArgs) Handles txtPApellido.MouseHover
+        ToolTip.SetToolTip(txtPApellido, "Ejemplo:  Martinez")
+        ToolTip.ToolTipTitle = "Apellido"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtSApellido_MouseHover(sender As Object, e As EventArgs) Handles txtSApellido.MouseHover
+        ToolTip.SetToolTip(txtSApellido, "Ejemplo:  Martinez")
+        ToolTip.ToolTipTitle = "Segundo Apellido"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtEdad_MouseHover(sender As Object, e As EventArgs) Handles txtEdad.MouseHover
+        ToolTip.SetToolTip(txtEdad, "Ejemplo: 19")
+        ToolTip.ToolTipTitle = "Edad"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtCodigo_MouseHover(sender As Object, e As EventArgs) Handles txtCodigo.MouseHover
+        ToolTip.SetToolTip(txtCodigo, "Ejemplo:  123")
+        ToolTip.ToolTipTitle = "Codigo"
+        ToolTip.ToolTipIcon = ToolTipIcon.Info
+    End Sub
+
+    Private Sub txtCodigo_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtCodigo.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorValidacion.SetError(sender, "")
+        Else
+            Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+        End If
+
+    End Sub
+
+    Private Sub txtPNombre_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtPNombre.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorValidacion.SetError(sender, "")
+        Else
+            Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+        End If
+
+    End Sub
+
+    Private Sub txtSNombre_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtSNombre.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorValidacion.SetError(sender, "")
+        Else
+            Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+        End If
+
+    End Sub
+
+    Private Sub txtPApellido_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtPApellido.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorValidacion.SetError(sender, "")
+        Else
+            Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+        End If
+
+    End Sub
+
+    Private Sub txtSApellido_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtSApellido.Validating
+        If DirectCast(sender, TextBox).Text.Length > 0 Then
+            Me.ErrorValidacion.SetError(sender, "")
+        Else
+            Me.ErrorValidacion.SetError(sender, "Es un campo obligatorio")
+        End If
+
     End Sub
 End Class
