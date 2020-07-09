@@ -161,6 +161,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="EjerciciosClase\SQLEstudiantes.txt" />
+    <None Include="Resources\36930.png" />
+    <None Include="Resources\estudiantes.jpg" />
+    <None Include="Resources\bolsa.jpg" />
+    <None Include="Resources\liberta.jpg" />
+    <None Include="Resources\computadoras.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
