@@ -159,5 +159,8 @@
   <ItemGroup>
     <Folder Include="tareas\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="EjerciciosClase\SQLEstudiantes.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -1,0 +1,62 @@
+﻿create database estudiantes
+go
+
+create schema Alumnos
+go
+
+use estudiantes
+go
+
+Drop table Alumnos.Registro
+
+create table  Alumnos.Registro(
+	id int primary key  not null,
+	PrimerNombre varchar(20) null,
+	SegundoNombre varchar (20),
+	PrimerApellido varchar(20) null,
+	SegundoApellido varchar (20),
+    edad int null,
+    sexo varchar(1) null FOREIGN KEY REFERENCES Alumnos.Sexo(id),
+	CodigoClase varchar(10) null FOREIGN KEY REFERENCES Alumnos.Clase(id),
+)
+
+select * from Alumnos.Registro
+Drop table Alumnos.Sexo
+create table Alumnos.Sexo(
+	id varchar(1) primary key not null,
+	nombreSexo varchar(10) not null
+)
+Drop table Alumnos.Clase
+create table Alumnos.Clase(
+	id varchar(10) primary key not null,
+	nombreClase varchar(30) not null
+)
+
+
+select re.id, re.primerNombre, re.segundoNombre, re.primerApellido, re.segundoApellido, re.edad, se.nombreSexo, cl.nombreClase from Alumnos.Registro as re
+inner join Alumnos.Sexo as se 
+on re.sexo = se.id
+inner join Alumnos.Clase as cl 
+on cl.id = re.CodigoClase
+
+insert into Alumnos.Sexo(id, nombreSexo) values ('M', 'Masculino')
+insert into Alumnos.Sexo(id, nombreSexo) values ('F', 'Femenino')
+
+insert into Alumnos.Clase ( id, nombreClase) values ('CT201', 'Contabilidad')
+insert into Alumnos.Clase ( id, nombreClase) values ('IDIN2', 'Ingles II')
+insert into Alumnos.Clase ( id, nombreClase) values ('MT401', 'Calculo I')
+insert into Alumnos.Clase ( id, nombreClase) values ('IF394', 'Diseño Grafico')
+insert into Alumnos.Clase ( id, nombreClase) values ('IF303', 'Programacion Estructurada')
+insert into Alumnos.Clase ( id, nombreClase) values ('IDIN3', 'Ingles Intermedio')
+insert into Alumnos.Clase ( id, nombreClase) values ('FS201', 'Fisica I')
+insert into Alumnos.Clase ( id, nombreClase) values ('CNFS1', 'Lab Fisica I')
+insert into Alumnos.Clase ( id, nombreClase) values ('AD302', 'Metodos de Investigacion')
+insert into Alumnos.Clase ( id, nombreClase) values ('AD101', 'Administracion')
+
+insert into Alumnos.Registro(id, primerNombre, segundoNombre, PrimerApellido, SegundoApellido,edad, sexo, CodigoClase) values ( '150','Daniela','Isabel','Vasquez','Mejia',19,'F','IF303')
+
+insert into Alumnos.Registro(id, primerNombre, segundoNombre, PrimerApellido, SegundoApellido,edad, sexo, CodigoClase) values ( '202','Elmer','Eduardo','Sabillon','Chandia',25,'M','FS201')
+insert into Alumnos.Registro(id, primerNombre, segundoNombre, PrimerApellido, SegundoApellido,edad, sexo, CodigoClase) values ( '201','Sandra','Jackelin','Calderon','Ramirez',19,'F','CT201')
+select * from  Alumnos.Sexo
+select * from  Alumnos.Clase
+select *from Alumnos.Registro

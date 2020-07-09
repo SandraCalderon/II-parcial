@@ -110,6 +110,32 @@ Public Class MenuPrincipal
     Private Sub btnEstudiantes_Click(sender As Object, e As EventArgs) Handles btnEstudiantes.Click
         AbrirFormEnPanel(Of frmestudiantes)()
     End Sub
+
+    Private Sub btnMinimizar_Click_1(sender As Object, e As EventArgs) Handles btnMinimizar.Click
+        Me.WindowState = FormWindowState.Minimized
+    End Sub
+
+    Private Sub btnRestaurar_Click(sender As Object, e As EventArgs) Handles btnRestaurar.Click
+        Me.Size = New Size(sw, sh)
+        Me.Location = New Point(lx, ly)
+        btnMaximizar.Visible = True
+        btnRestaurar.Visible = False
+    End Sub
+
+    Private Sub btnMaximizar_Click_1(sender As Object, e As EventArgs) Handles btnMaximizar.Click
+        lx = Me.Location.X
+        ly = Me.Location.Y
+        sw = Me.Size.Width
+        sh = Me.Size.Height
+        btnMaximizar.Visible = False
+        btnRestaurar.Visible = True
+        Me.Size = Screen.PrimaryScreen.WorkingArea.Size
+        Me.Location = Screen.PrimaryScreen.WorkingArea.Location
+    End Sub
+
+    Private Sub btnCerrar_Click_1(sender As Object, e As EventArgs) Handles btnCerrar.Click
+        Application.Exit()
+    End Sub
 #End Region
 
     Private Sub AbrirFormEnPanel(Of Miform As {Form, New})()

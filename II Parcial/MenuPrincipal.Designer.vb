@@ -36,18 +36,18 @@ Partial Class MenuPrincipal
         Me.btnProductos = New System.Windows.Forms.Button()
         Me.btnclientes = New System.Windows.Forms.Button()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.PanelBarraTitulo = New System.Windows.Forms.Panel()
-        Me.btnRestaurar = New System.Windows.Forms.PictureBox()
-        Me.btnMinimizar = New System.Windows.Forms.PictureBox()
-        Me.btnMaximizar = New System.Windows.Forms.PictureBox()
         Me.btnCerrar = New System.Windows.Forms.PictureBox()
+        Me.btnMaximizar = New System.Windows.Forms.PictureBox()
+        Me.btnMinimizar = New System.Windows.Forms.PictureBox()
+        Me.btnRestaurar = New System.Windows.Forms.PictureBox()
+        Me.PanelBarraTitulo = New System.Windows.Forms.Panel()
         Me.PanelContenedor.SuspendLayout()
         Me.PanelMenu.SuspendLayout()
-        Me.PanelBarraTitulo.SuspendLayout()
-        CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.PanelBarraTitulo.SuspendLayout()
         Me.SuspendLayout()
         '
         'PanelContenedor
@@ -218,19 +218,41 @@ Partial Class MenuPrincipal
         Me.Panel3.Size = New System.Drawing.Size(18, 42)
         Me.Panel3.TabIndex = 14
         '
-        'PanelBarraTitulo
+        'btnCerrar
         '
-        Me.PanelBarraTitulo.BackColor = System.Drawing.Color.Black
-        Me.PanelBarraTitulo.Controls.Add(Me.btnRestaurar)
-        Me.PanelBarraTitulo.Controls.Add(Me.btnMinimizar)
-        Me.PanelBarraTitulo.Controls.Add(Me.btnMaximizar)
-        Me.PanelBarraTitulo.Controls.Add(Me.btnCerrar)
-        Me.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
-        Me.PanelBarraTitulo.Location = New System.Drawing.Point(0, 0)
-        Me.PanelBarraTitulo.Margin = New System.Windows.Forms.Padding(2)
-        Me.PanelBarraTitulo.Name = "PanelBarraTitulo"
-        Me.PanelBarraTitulo.Size = New System.Drawing.Size(1050, 32)
-        Me.PanelBarraTitulo.TabIndex = 0
+        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnCerrar.Image = CType(resources.GetObject("btnCerrar.Image"), System.Drawing.Image)
+        Me.btnCerrar.Location = New System.Drawing.Point(1029, 10)
+        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnCerrar.Name = "btnCerrar"
+        Me.btnCerrar.Size = New System.Drawing.Size(16, 16)
+        Me.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.btnCerrar.TabIndex = 0
+        Me.btnCerrar.TabStop = False
+        '
+        'btnMaximizar
+        '
+        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMaximizar.Image = CType(resources.GetObject("btnMaximizar.Image"), System.Drawing.Image)
+        Me.btnMaximizar.Location = New System.Drawing.Point(1005, 10)
+        Me.btnMaximizar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnMaximizar.Name = "btnMaximizar"
+        Me.btnMaximizar.Size = New System.Drawing.Size(16, 16)
+        Me.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.btnMaximizar.TabIndex = 1
+        Me.btnMaximizar.TabStop = False
+        '
+        'btnMinimizar
+        '
+        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnMinimizar.Image = CType(resources.GetObject("btnMinimizar.Image"), System.Drawing.Image)
+        Me.btnMinimizar.Location = New System.Drawing.Point(979, 10)
+        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(2)
+        Me.btnMinimizar.Name = "btnMinimizar"
+        Me.btnMinimizar.Size = New System.Drawing.Size(16, 16)
+        Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
+        Me.btnMinimizar.TabIndex = 0
+        Me.btnMinimizar.TabStop = False
         '
         'btnRestaurar
         '
@@ -245,41 +267,19 @@ Partial Class MenuPrincipal
         Me.btnRestaurar.TabStop = False
         Me.btnRestaurar.Visible = False
         '
-        'btnMinimizar
+        'PanelBarraTitulo
         '
-        Me.btnMinimizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMinimizar.Image = CType(resources.GetObject("btnMinimizar.Image"), System.Drawing.Image)
-        Me.btnMinimizar.Location = New System.Drawing.Point(979, 10)
-        Me.btnMinimizar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnMinimizar.Name = "btnMinimizar"
-        Me.btnMinimizar.Size = New System.Drawing.Size(16, 16)
-        Me.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.btnMinimizar.TabIndex = 0
-        Me.btnMinimizar.TabStop = False
-        '
-        'btnMaximizar
-        '
-        Me.btnMaximizar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnMaximizar.Image = CType(resources.GetObject("btnMaximizar.Image"), System.Drawing.Image)
-        Me.btnMaximizar.Location = New System.Drawing.Point(1005, 10)
-        Me.btnMaximizar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnMaximizar.Name = "btnMaximizar"
-        Me.btnMaximizar.Size = New System.Drawing.Size(16, 16)
-        Me.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.btnMaximizar.TabIndex = 1
-        Me.btnMaximizar.TabStop = False
-        '
-        'btnCerrar
-        '
-        Me.btnCerrar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnCerrar.Image = CType(resources.GetObject("btnCerrar.Image"), System.Drawing.Image)
-        Me.btnCerrar.Location = New System.Drawing.Point(1029, 10)
-        Me.btnCerrar.Margin = New System.Windows.Forms.Padding(2)
-        Me.btnCerrar.Name = "btnCerrar"
-        Me.btnCerrar.Size = New System.Drawing.Size(16, 16)
-        Me.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize
-        Me.btnCerrar.TabIndex = 0
-        Me.btnCerrar.TabStop = False
+        Me.PanelBarraTitulo.BackColor = System.Drawing.Color.Black
+        Me.PanelBarraTitulo.Controls.Add(Me.btnRestaurar)
+        Me.PanelBarraTitulo.Controls.Add(Me.btnMinimizar)
+        Me.PanelBarraTitulo.Controls.Add(Me.btnMaximizar)
+        Me.PanelBarraTitulo.Controls.Add(Me.btnCerrar)
+        Me.PanelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top
+        Me.PanelBarraTitulo.Location = New System.Drawing.Point(0, 0)
+        Me.PanelBarraTitulo.Margin = New System.Windows.Forms.Padding(2)
+        Me.PanelBarraTitulo.Name = "PanelBarraTitulo"
+        Me.PanelBarraTitulo.Size = New System.Drawing.Size(1050, 32)
+        Me.PanelBarraTitulo.TabIndex = 0
         '
         'MenuPrincipal
         '
@@ -292,12 +292,12 @@ Partial Class MenuPrincipal
         Me.Text = "MenuPrincipal"
         Me.PanelContenedor.ResumeLayout(False)
         Me.PanelMenu.ResumeLayout(False)
+        CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.PanelBarraTitulo.ResumeLayout(False)
         Me.PanelBarraTitulo.PerformLayout()
-        CType(Me.btnRestaurar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnMinimizar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnMaximizar, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.btnCerrar, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -305,11 +305,6 @@ Partial Class MenuPrincipal
     Friend WithEvents PanelContenedor As Panel
     Friend WithEvents PanelFormularios As Panel
     Friend WithEvents PanelMenu As Panel
-    Friend WithEvents PanelBarraTitulo As Panel
-    Friend WithEvents btnRestaurar As PictureBox
-    Friend WithEvents btnMinimizar As PictureBox
-    Friend WithEvents btnMaximizar As PictureBox
-    Friend WithEvents btnCerrar As PictureBox
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Button2 As Button
     Friend WithEvents Panel5 As Panel
@@ -320,4 +315,9 @@ Partial Class MenuPrincipal
     Friend WithEvents Panel3 As Panel
     Friend WithEvents btnEstudiantes As Button
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents PanelBarraTitulo As Panel
+    Friend WithEvents btnRestaurar As PictureBox
+    Friend WithEvents btnMinimizar As PictureBox
+    Friend WithEvents btnMaximizar As PictureBox
+    Friend WithEvents btnCerrar As PictureBox
 End Class
