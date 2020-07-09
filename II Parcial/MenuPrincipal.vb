@@ -106,6 +106,10 @@ Public Class MenuPrincipal
             End
         End If
     End Sub
+
+    Private Sub btnEstudiantes_Click(sender As Object, e As EventArgs) Handles btnEstudiantes.Click
+        AbrirFormEnPanel(Of frmestudiantes)()
+    End Sub
 #End Region
 
     Private Sub AbrirFormEnPanel(Of Miform As {Form, New})()
